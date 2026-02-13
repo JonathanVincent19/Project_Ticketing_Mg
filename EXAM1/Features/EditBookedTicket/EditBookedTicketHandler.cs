@@ -14,8 +14,8 @@ namespace EXAM1.Features.EditBookedTicket
             _context = context;
         }
         public async Task<List<EditBookedTicketResponse>> Handle(
-    EditBookedTicketCommand request,
-    CancellationToken cancellationToken)
+            EditBookedTicketCommand request,
+            CancellationToken cancellationToken)
         {
             var bookedTicket = await _context.BookedTickets
                 .Include(bt => bt.BookedTicketItems)
